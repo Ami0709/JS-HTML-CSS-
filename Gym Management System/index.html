@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/gym.png" type="image/x-icon">
+    <title>Gym Management System</title>
+</head>
+
+<body>
+
+        <h1>Gym Management System</h1>
+
+    <main>
+
+        <section class="browse-workouts">
+            <h2>Browse Workouts</h2>
+            <label for="bw-memberID">
+                Enter Member ID:
+                <input type="text" id="bw-memberID" required>
+            </label>
+            <button class="btn" id="bw-btn">Browse Workouts</button>
+            <div id="bw-result"></div>
+        </section>
+
+        <section class="track-progress">
+            <h2>Track Progress</h2>
+            <label for="tp-memberID">
+                Enter Member ID:
+                <input type="text" id="tp-memberID" required>
+            </label>
+            <button class="btn" id="tp-btn">Track Progress</button>
+            <div id="tp-result"></div>
+        </section>
+
+        <section class="manage-membership">
+            <h2>Manage Membership</h2>
+            <label for="mm-memberID">
+                Enter Member ID:
+                <input type="text" id="mm-memberID" required>
+            </label>
+            <label>
+                Select Action:
+                <select id="mm-action">
+                    <option value="Activate">Activate</option>
+                    <option value="Deactivate">Deactivate</option>
+                </select>
+            </label>
+            <button class="btn" id="mm-btn">Manage Membership</button>
+            <div id="mm-result"></div>
+        </section>
+
+        <section class="view-members">
+            <h2>View Members</h2>
+            <label>
+                Start Date (dd/mm/yyyy):
+                <input type="date" id="startDate" required>
+            </label>
+
+            <label>
+                End Date (dd/mm/yyyy):
+                <input type="date" id="endDate" required>
+            </label>
+            <button class="btn" id="vm-btn">View Members</button>
+            <div id="vm-result"></div>
+        </section>
+
+    </main>
+
+
+    <script src="objects.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
