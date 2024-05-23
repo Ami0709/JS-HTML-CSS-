@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Food Ordering System</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Food ordering System</h1>
+      <div class="owner">
+        <h2 id="for-owner">For Owner Use</h2>
+        <div>
+          <p>Enter Owner User Id</p>
+          <input type="text" id="owner-id" />
+          <button id="editMenu">Edit Menu</button>
+          <button id="ad-item">Add Item In Menu</button>
+          <button id="remove-item">Remove Item from Menu</button>
+        </div>
+        <div>
+          <p>Enter Owner User Id</p>
+          <input type="text" id="owner-id2" />
+          <button id="edit-order-status">Edit Order Status</button>
+        </div>
+        <div class="view-orders">
+          <h2>View Orders</h2>
+          <div id="viewing-order"></div>
+          <p class="start_date">Start Date (yyyy/mm/dd):</p>
+          <input type="text" id="startDate" />
+          <p class="end_date">End Date (yyyy/mm/dd):</p>
+          <input type="text" id="endDate" />
+          <button type="submit" id="viewStatus">View Orders</button>
+        </div>
+      </div>
+      <div class="customer">
+        <h2 id="for-customers">For Customers</h2>
+        <div>
+          <button id="browseMenu">Browse Menu</button>
+        </div>
+        <div id="menu"></div>
+        <div class="place-order">
+          <h2>Place Order</h2>
+          <div class="select-items">
+            <p>Select Items</p>
+            <form>
+              <textarea id="selectItems"></textarea>
+            </form>
+          </div>
+          <div class="address">
+            <p>Delivery Address</p>
+            <form>
+              <textarea id="deliveryAddress"></textarea>
+            </form>
+          </div>
+          <button id="btnPlaceOrder">Place Order</button>
+        </div>
+        <div class="order-list">
+          <h2>Order List</h2>
+          <div class="order-list"></div>
+        </div>
+        <div class="order-status">
+          <h2>Order Status</h2>
+          <form>
+            <p class="order-id">Enter Order ID:</p>
+            <input type="text" id="orderId" />
+          </form>
+          <button id="btnOrderStatus">Track Order Status</button>
+        </div>
+      </div>
+    </div>
+    <script src="./javascript/app.js"></script>
+  </body>
+</html>
