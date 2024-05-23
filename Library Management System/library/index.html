@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="./assests/style.css">
+    <script src="./assests/app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Library Management System</h1>
+        </header>
+        <main>
+            <!-- ADD BOOKS -->
+            <div class="add-book">
+                <h2>Add Book</h2>
+                <form id="addBookForm">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" placeholder="Enter title">
+                    
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" placeholder="Enter author">
+                    
+                    <label for="publicationYear">Publication Year:</label>
+                    <input type="number" id="publicationYear" name="publicationYear" placeholder="Enter publication year">
+                    
+                    <label for="isbn">ISBN:</label>
+                    <input type="text" id="isbn" name="isbn" placeholder="Enter ISBN">
+                    
+                    <button type="submit">Add Book</button>
+                </form>
+            </div>
+
+            <div class="book-list">
+                <h2>Book List</h2>
+                <table id="bookListTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Publication Year</th>
+                            <th>Availability</th>
+                            <th>Max Allowed Days</th>
+                            <th>ISBN</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bookListTableBody">
+                        <!-- Book list will be dynamically populated here -->
+                    </tbody>
+                </table>
+            </div>
+            <!-- SEARCH BOOKS  -->
+            <div class="search-book">
+                <h2>Search Book</h2>
+                <form id="searchForm">
+                    <label for="book-details">Enter Book Details (Title, Author, Publication Year):</label>
+                    <input type="text" id="book-details" name="book-details" placeholder="Enter book details">
+                    <button type="submit">Search Book</button>
+                </form>
+            </div>
+
+            <div class="book-list" id="searchBookList">
+                <h2>Search Results</h2>
+                <table id="searchBookListTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Publication Year</th>
+                            <th>Availability</th>
+                            <th>Max Allowed Days</th>
+                            <th>ISBN</th>
+                        </tr>
+                    </thead>
+                    <tbody id="searchBookListTableBody">
+                        <!-- Search results will be populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- BORROW BOOKS -->
+            <div class="borrow-book">
+                <h2>Borrow Book</h2>
+                <form id="borrowForm">
+                    <label for="book-id">Enter Book ID:</label>
+                    <input type="number" id="book-id" name="book-id" placeholder="Enter book ID">
+                    <button type="submit">Borrow Book</button>
+                </form>
+            </div>
+
+            <div class="borrowed-book-list">
+                <h2>Borrowed Book List</h2>
+                <table id="borrowedBookTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Publication Year</th>
+                            <th>ISBN</th>
+                            <th>Borrowed Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Borrowed book list will be populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- AVAILABLE BOOKS -->
+            <div class="check-availability">
+                <h2>Check Book Availability</h2>
+                <form id="availabilityForm">
+                    <label for="book-id-name">Enter Book ID/Name:</label>
+                    <input type="text" id="book-id-name" name="book-id-name" placeholder="Enter book ID/name">
+                    <button type="submit">Check Availability</button>
+                </form>
+            </div>
+
+            <div class="available-book-list">
+                <h2>Available Book List</h2>
+                <table id="availableBookTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Publication Year</th>
+                            <th>ISBN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <!-- Available book list will be populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- RETURN BOOKS -->
+            <div class="return-book">
+                <h2>Return Book</h2>
+                <form id="returnForm">
+                    <label for="isbn">Enter ISBN:</label>
+                    <input type="text" id="isbn" name="isbn" placeholder="Enter ISBN">
+                    <button type="submit">Return Book</button>
+                </form>
+            </div>
+
+            <!-- DUE DATE -->
+            <div class="due-date-check">
+                <h2>Due Date Check</h2>
+                <form id="dueDateForm">
+                    <label for="book-id-name-due">Enter Book ID/Name:</label>
+                    <input type="text" id="book-id-name-due" name="book-id-name" placeholder="Enter book ID/name">
+                    <button type="submit">Check Due Date</button>
+                </form>
+            </div>
+            
+            <div class="dueDateDetails">
+                <h2>Due Date Book List</h2>
+                <table id="dueDateBookTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Publication Year</th>
+                            <th>DUE DATE</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dueDateBookTableBody">
+                        <!-- Due Date book list will be populated dynamically -->
+                    </tbody>
+                </table>
+
+        </main>
+    </div>
+
+</body>
+</html>
